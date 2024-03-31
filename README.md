@@ -8,8 +8,22 @@ This repository contains the code and configurations for an Ansible and Docker C
 - **docker-compose/**: Includes Docker Compose configuration files.
 - **scripts/**: Additional scripts for environment setup or automation.
 - **README.md**: This file providing an overview of the project.
+## Folders
 
-## Getting Started
+1. **ansible_control**: Contains Ansible control files and configurations.
+2. **ansible_managed**: Stores managed resources or templates managed by Ansible.
+3. **bastion**: Includes configurations for a bastion server or jump host.
+4. **db_server**: Contains configurations for the database server.
+5. **web_server**: Includes configurations for the web server component.
+
+###Files
+
+1. **Dockerfile**: Defines instructions to build Docker images.
+2. **docker-compose.yml**: Defines services, networks, and volumes for Docker containers using Docker Compose.
+3. **entrypoint.sh**: A script serving as the entry point for Docker containers.
+
+
+### Getting Started
 To get started with this project, follow these steps:
 1. Clone this repository to your local machine.
 2. Install Ansible and Docker if not already installed.
