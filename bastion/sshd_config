@@ -1,0 +1,5 @@
+# /bastion/sshd_config
+Port 22
+PermitRootLogin yes
+PasswordAuthentication yes
+

@@ -1,0 +1,11 @@
+---
+- name: Configure Bastion Server
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+    # Add more tasks as needed for Bastion server setup
+

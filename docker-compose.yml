@@ -1,0 +1,31 @@
+version: '3'
+services:
+  ansible_control:
+    build: ./ansible_control
+    volumes:
+      - ./ansible_control:/ansible
+    command: tail -f /dev/null
+
+  ansible_managed:
+    build: ./ansible_managed
+    command: tail -f /dev/null
+
+  bastion:
+    build: ./bastion
+    networks:
+      - dev_network
+
+  web_server:
+    build: ./web_server
+    networks:
+      - dev_network
+
+  db_server:
+    build: ./db_server
+    networks:
+      - dev_network
+
+networks:
+  dev_network:
+    driver: bridge
+
